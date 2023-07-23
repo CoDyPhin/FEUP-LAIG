@@ -10,7 +10,7 @@
 
 ## Projects
 
-### [TP1 - Scene Graph](TP1)
+### [TP1 - Scene Graph](https://github.com/CoDyPhin/FEUP-LAIG/edit/master/TP1/)
 
 - Polus Laboratory from "Among Us":
   - Telescope
