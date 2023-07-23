@@ -1,0 +1,2667 @@
+<lsf>
+
+    <initials>
+        <reference length="1" />
+        <root id="root" />
+    </initials>
+
+    <views>
+        <perspective id="Camera 1" near="0.1" far="300" angle="45">
+            <from x="20" y="20" z="30" />
+            <to x="0" y="5" z="0" />
+        </perspective>
+
+        <perspective id="Camera 2" near="0.1" far="300" angle="45">
+            <from x="-50" y="20" z="30" />
+            <to x="-30" y="5" z="0" />
+        </perspective>
+
+        <perspective id="Camera 3" near="0.1" far="300" angle="45">
+            <from x="20" y="20" z="-55" />
+            <to x="-10" y="10" z="-30" />
+        </perspective>
+
+        <perspective id="Camera 4" near="0.1" far="300" angle="45">
+            <from x="-55" y="20" z="-60" />
+            <to x="-5" y="-5" z="0" />
+        </perspective>
+
+        <perspective id="Camera 5" near="0.1" far="300" angle="45">
+            <from x="-10" y="20" z="15" />
+            <to x="-10" y="15" z="0" />
+        </perspective>
+
+        <perspective id="Player Camera" near="0.1" far="300" angle="45">
+            <from x="5.5" y="10" z="13.5" />
+            <to x="5.5" y="0" z="0" />
+        </perspective>
+    </views>
+    
+
+    <illumination>
+        <ambient r="0.2" g="0.2" b="0.2" a="1.0" />         
+        <background r="0.1" g="0.7" b="1.0" a="1.0" />        
+    </illumination>
+
+
+    <lights>
+        <light id="light1">           
+            <enable value="0" />
+            <position x="20" y="20" z="-55" w="1.0" />
+            <ambient r="0.2" g="0.2" b="0.2" a="1.0" />                  
+            <diffuse r="0.6" g="0.6" b="0.6" a="1.0" />             
+            <specular r="0.6" g="0.6" b="0.6" a="1.0" />            
+        </light>
+
+        <light id="light2">           
+            <enable value="0" />
+            <position x="-57.5" y="20" z="-55" w="1.0" />
+            <ambient r="0.2" g="0.2" b="0.2" a="1.0" />                  
+            <diffuse r="0.6" g="0.6" b="0.6" a="1.0" />             
+            <specular r="0.6" g="0.6" b="0.6" a="1.0" />            
+        </light>
+
+        <light id="light3">           
+            <enable value="0" />
+            <position x="-30" y="20" z="-55" w="1.0" />
+            <ambient r="0.2" g="0.2" b="0.2" a="1.0" />                  
+            <diffuse r="0.6" g="0.6" b="0.6" a="1.0" />             
+            <specular r="0.6" g="0.6" b="0.6" a="1.0" />            
+        </light>
+    </lights>
+
+
+    <textures>
+        <texture id="woodTex" path="./scenes/images/woodTex.jpg" />
+        <texture id="woodTex2" path="./scenes/images/woodTex2.jpg" />
+        <texture id="lightWood" path="./scenes/images/lightWood.jpg" />
+        <texture id="BlackTex" path="./scenes/images/blackTex.jpg" />
+        <texture id="marmore" path="./scenes/images/marmore.jpg" />
+        <texture id="metal" path="./scenes/images/metal.jpg" />
+        <texture id="woodFloor" path="./scenes/images/woodFloor.jpg" />
+        <texture id="sofa" path="./scenes/images/sofaTex.jpg" />
+        <texture id="lamp" path="./scenes/images/lamp.jpg" />
+        <texture id="door" path="./scenes/images/door.png" />
+        <texture id="painting1" path="./scenes/images/painting1.png" />
+        <texture id="painting2" path="./scenes/images/painting2.png" />
+        <texture id="xqc" path="./scenes/images/xqc.png" />
+        <texture id="carpet" path="./scenes/images/carpet.jpg" />
+    </textures>
+
+
+    <materials>
+        <material id="defaultMaterial">
+            <shininess value="1.0" />
+            <ambient r="0.8" g="0.44" b="0.13" a="1.0" />
+            <diffuse r="0.4" g="0.4" b="0.4" a="1.0" />
+            <specular r="0.4" g="0.4" b="0.4" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="LightBrown">
+            <shininess value="1.0" />
+            <ambient r="0.8" g="0.44" b="0.13" a="1.0" />
+            <diffuse r="0.4" g="0.4" b="0.4" a="1.0" />
+            <specular r="0.4" g="0.4" b="0.4" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="DarkBrown">
+            <shininess value="1.0" />
+            <ambient r="0.45" g="0.25" b="0.07" a="1.0" />
+            <diffuse r="0.4" g="0.4" b="0.4" a="1.0" />
+            <specular r="0.4" g="0.4" b="0.4" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="Black">
+            <shininess value="1.0" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1.0" />
+            <diffuse r="0.0" g="0.0" b="0.0" a="1.0" />
+            <specular r="0.0" g="0.0" b="0.0" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="White">
+            <shininess value="1.0" />
+            <ambient r="1.0" g="1.0" b="1.0" a="1.0" />
+            <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+            <emissive r="1.0" g="1.0" b="1.0" a="1.0" />
+        </material>
+        <material id="LightGrey">
+            <shininess value="1.0" />
+            <ambient r="0.90" g="0.90" b="0.90" a="1.0" />
+            <diffuse r="0.90" g="0.90" b="0.90" a="1.0" />
+            <specular r="0.90" g="0.90" b="0.90" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="Red">
+            <shininess value="1.0" />
+            <ambient r="0.25" g="0.0" b="0.0" a="1.0" />
+            <diffuse r="0.25" g="0.0" b="0.0" a="1.0" />
+            <specular r="0.25" g="0.0" b="0.0" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="Green">
+            <shininess value="1.0" />
+            <ambient r="0.0" g="0.25" b="0.0" a="1.0" />
+            <diffuse r="0.0" g="0.25" b="0.0" a="1.0" />
+            <specular r="0.0" g="0.25" b="0.0" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="Blue">
+            <shininess value="1.0" />
+            <ambient r="0.0" g="0.0" b="0.25" a="1.0" />
+            <diffuse r="0.0" g="0.0" b="0.25" a="1.0" />
+            <specular r="0.0" g="0.0" b="0.25" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="Pink">
+            <shininess value="1.0" />
+            <ambient r="0.25" g="0.0" b="0.25" a="1.0" />
+            <diffuse r="0.25" g="0.0" b="0.25" a="1.0" />
+            <specular r="0.25" g="0.0" b="0.25" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="Yellow">
+            <shininess value="1.0" />
+            <ambient r="0.25" g="0.25" b="0.0" a="1.0" />
+            <diffuse r="0.25" g="0.25" b="0.0" a="1.0" />
+            <specular r="0.25" g="0.25" b="0.0" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="LightBlue">
+            <shininess value="1.0" />
+            <ambient r="0.0" g="0.25" b="0.25   " a="1.0" />
+            <diffuse r="0.0" g="0.25" b="0.25" a="1.0" />
+            <specular r="0.0" g="0.25" b="0.25" a="1.0" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+    </materials>
+
+    <animations>
+        <animation id="ejected" >
+            <keyframe instant="0">
+                <translation x="0" y="0" z="0" />
+                <rotation axis="x" angle="0" />
+                <rotation axis="y" angle="0" />
+                <rotation axis="z" angle="0" />
+                <scale sx="1" sy="1" sz="1" />
+            </keyframe>
+            <keyframe instant="2">
+                <translation x="10" y="0" z="0" />
+                <rotation axis="x" angle="0" />
+                <rotation axis="y" angle="0" />
+                <rotation axis="z" angle="-200" />
+                <scale sx="1" sy="1" sz="1" />
+            </keyframe>
+            <keyframe instant="4">
+                <translation x="20" y="0" z="0" />
+                <rotation axis="x" angle="0" />
+                <rotation axis="y" angle="0" />
+                <rotation axis="z" angle="-400" />
+                <scale sx="1" sy="1" sz="1" />
+            </keyframe>
+            <keyframe instant="6">
+                <translation x="30" y="0" z="0" />
+                <rotation axis="x" angle="0" />
+                <rotation axis="y" angle="0" />
+                <rotation axis="z" angle="-600" />
+                <scale sx="1" sy="1" sz="1" />
+            </keyframe>
+        </animation>
+    </animations>
+
+    <spritesheets>
+        <spritesheet id="confetti" path="./scenes/images/confetti.png" sizeM="8" sizeN="8"/>
+    </spritesheets>
+
+    <nodes>
+        <node id="root">
+            <material id="defaultMaterial" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="0" z="-5" />
+                <scale sx="1" sy="1" sz="1" />
+            </transformations>
+
+            
+            <descendants>
+                <noderef id = "board"/>     
+                <noderef id = "boardBigSupport"/>     
+                <noderef id = "pieceSupport"/>     
+                <noderef id = "pieceSupport2"/>    
+                <noderef id = "boardSupport"/> 
+                <noderef id = "piecesBox"/> 
+                <noderef id = "scoreBoard1"/>   
+                <noderef id = "scoreBoard2"/>   
+                <noderef id = "table"/>
+                <noderef id = "chair1"/>
+                <noderef id = "chair2"/>
+                <noderef id = "cubemap"/>
+                <noderef id = "sofa"/>
+                <noderef id ="lamp" />
+                <noderef id ="shelf" />
+                <noderef id ="miniShelf" />
+                <noderef id ="tv" />
+                <noderef id ="rodapes" />
+                <noderef id ="door1" />
+                <noderef id ="door2" />
+                <noderef id ="painting1" />
+                <noderef id ="painting2" />
+                <noderef id ="carpet" />
+            </descendants>
+        </node>
+
+        <node id="carpet">
+            <material id="LightBrown" />
+
+            <texture id="carpet">
+                <amplification afs="30.0" aft="20.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-9" y="-14.75" z="30" />-->
+                <rotation axis="y" angle="90" />
+                <rotation axis="x" angle="-90" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="60" y2="40" />
+            </descendants>
+        </node>
+
+        <node id="painting1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-40" y="0" z="-52.5" />
+            </transformations>
+
+            <descendants>
+                <noderef id="paintingFrame" />
+                <noderef id="paintingImage1" />
+            </descendants>
+        </node>
+
+        <node id="painting2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="22.5" y="0" z="-5" />
+                <rotation axis="y" angle="-90" />
+            </transformations>
+
+            <descendants>
+                <noderef id="paintingFrame" />
+                <noderef id="paintingImage2" />
+            </descendants>
+        </node>
+
+        <node id="paintingFrame">
+            <material id="LightBrown" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <scale sx="6" sy="3" sz="0.1" />
+            </transformations>
+
+            <descendants>
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="paintingImage1">
+            <material id="LightBrown" />
+
+            <texture id="painting1">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>   
+                <translation x="0" y="0" z="0.325" />
+                <scale sx="6" sy="3" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="paintingImage2">
+            <material id="LightBrown" />
+
+            <texture id="painting2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="0" z="0.325" />
+                <scale sx="6" sy="3" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="door1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <noderef id="doorMain" />
+                <noderef id="doorHandle" />
+            </descendants>
+        </node>
+
+        <node id="door2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-30" y="0" z="-25" />
+                <rotation axis="y" angle="-90" />
+            </transformations>
+
+            <descendants>
+                <noderef id="doorMain" />
+                <noderef id="doorHandle" />
+            </descendants>
+        </node>
+
+        <node id="doorHandle">
+            <material id="Yellow" />
+
+            <texture id="door">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="1" y="-3.5" z="-51" />
+                <scale sx="1" sy="1" sz="1" />
+            </transformations>
+
+            <descendants>
+                <noderef id="doorSphere" />
+                <noderef id="doorCil" />
+            </descendants>
+        </node>
+
+        <node id="doorSphere">
+            <material id="Yellow" />
+
+            <texture id="door">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="0" z="0.75" />
+            </transformations>
+
+            <descendants>
+                <leaf type="sphere" radius="0.5" stacks="64" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="doorCil">
+            <material id="Yellow" />
+
+            <texture id="door">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <leaf type="cylinder" height="0.5" topRadius="0.25" bottomRadius="0.25" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="doorMain">
+            <material id="LightBrown" />
+
+            <texture id="door">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-10" y="-15" z="-52.5" />
+                <scale sx="4.5" sy="9" sz="0.3" />
+            </transformations>
+
+            <descendants>
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="rodapes">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+            </transformations>
+
+            
+            <descendants>
+                <noderef id="rodape1" />
+                <noderef id="rodape2" />
+                <noderef id="rodape3" />
+                <noderef id="rodape4" />
+            </descendants>
+        </node>
+
+        <node id="rodape1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-60" y="-15" z="-52.5" />
+                <scale sx="0.25" sy="0.5" sz="27.5" /> 
+            </transformations>
+
+            
+            <descendants>
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="rodape2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-60" y="-15" z="30" />
+                <rotation axis="y" angle="90" />
+                <scale sx="0.25" sy="0.5" sz="27.5" /> 
+            </transformations>
+
+            
+            <descendants>
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="rodape3">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="21.75" y="-15" z="-52.5" />
+                <scale sx="0.25" sy="0.5" sz="27.5" /> 
+            </transformations>
+
+            
+            <descendants>
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="rodape4">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-60" y="-15" z="-51.75" />
+                <rotation axis="y" angle="90" />
+                <scale sx="0.25" sy="0.5" sz="27.5" /> 
+            </transformations>
+
+            
+            <descendants>
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="tv">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-30.5" y="-13.5" z="-7.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="tvBottom" />
+                <noderef id ="tvSupport" />
+                <noderef id ="tvMain" />
+                <noderef id ="tvScreen" />
+            </descendants>
+        </node>
+
+        <node id="tvBottom">
+            <material id="Black" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-24" y="5" z="8" />
+                <rotation axis="x" angle="-90" />
+                <scale sx="1" sy="2" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="2" topRadius="2.5" bottomRadius="2.5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="tvSupport">
+            <material id="Black" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-24" y="6" z="8" />
+                <rotation axis="x" angle="-90" />
+                <scale sx="1" sy="1" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="4" topRadius="1" bottomRadius="1" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="tvMain">
+            <material id="Black" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-25" y="8" z="20" />
+                <rotation axis="x" angle="-90" />
+                <scale sx="0.5" sy="8" sz="4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube"/>
+            </descendants>
+        </node>
+
+        <node id="tvScreen">
+            <material id="White" />
+
+            <texture id="xqc">
+                <amplification afs="10.0" aft="10.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-23.475" y="8.375" z="19.25" />
+                <rotation axis="y" angle="90" />
+                <scale sx="2.25" sy="1.125" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="rectangle" x1="0" y1="0" x2="10" y2="10" />
+            </descendants>
+        </node>
+
+        <node id="miniShelf">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-30.5" y="-13.5" z="-7.5" />
+                <scale sx="1" sy="0.25" sz="1.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="shelfBottom" />
+                <noderef id ="shelfTop" />
+                <noderef id ="shelfRight" />
+                <noderef id ="shelfLeft" />
+            </descendants>
+        </node>
+
+        <node id="shelf">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-30.5" y="-8.5" z="-40" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="shelfBottom" />
+                <noderef id ="shelfTop" />
+                <noderef id ="shelfRight" />
+                <noderef id ="shelfLeft" />
+                <noderef id ="shelfBack" />
+                <noderef id ="bookShelf1" />
+                <noderef id ="bookShelf2" />
+                <noderef id ="bookSequence1" />
+                <noderef id ="bookSequence2" />
+                <noderef id ="bookSequence3" />
+            </descendants>
+        </node>
+        
+        <node id="bookSequence3">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-15.5" z="0" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="book1" />
+                <noderef id ="book2" />
+                <noderef id ="book3" />
+                <noderef id ="book4" />
+                <noderef id ="book5" />
+                <noderef id ="book6" />
+                <noderef id ="book7" />
+            </descendants>
+        </node>
+
+        <node id="bookSequence2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-8.5" z="-9" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="book1" />
+                <noderef id ="book2" />
+                <noderef id ="book3" />
+                <noderef id ="book4" />
+                <noderef id ="book5" />
+                <noderef id ="book6" />
+                <noderef id ="book7" />
+            </descendants>
+        </node>
+
+        <node id="bookSequence1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="book1" />
+                <noderef id ="book2" />
+                <noderef id ="book3" />
+                <noderef id ="book4" />
+                <noderef id ="book5" />
+                <noderef id ="book6" />
+                <noderef id ="book7" />
+            </descendants>
+        </node>
+
+        <node id="book1">
+            <material id="Red" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-27.5" y="12" z="14" />
+                <scale sx="2" sy="2" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="book2">
+            <material id="Green" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-27.5" y="12" z="12.5" />
+                <scale sx="2" sy="1.75" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="book3">
+            <material id="Blue" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-27.5" y="12" z="11" />
+                <scale sx="2" sy="1.75" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="book4">
+            <material id="Pink" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-27.5" y="12" z="9.5" />
+                <scale sx="2" sy="2" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="book5">
+            <material id="Yellow" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-27.5" y="12" z="8" />
+                <scale sx="2" sy="1.75" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="book6">
+            <material id="LightBlue" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-27.5" y="12" z="6.5" />
+                <scale sx="2" sy="2" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="book7">
+            <material id="White" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-27.5" y="12" z="5" />
+                <scale sx="2" sy="1.75" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="bookShelf2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-28.5" y="10.5" z="-4.5" />
+                <scale sx="3" sy="0.5" sz="6.6" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="bookShelf1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-28.5" y="2.5" z="-4.5" />
+                <scale sx="3" sy="0.5" sz="6.6" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="shelfBack">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-28.5" y="-3.5" z="-4.5" />
+                <scale sx="0.5" sy="7.5" sz="6.6" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="shelfBottom">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-28.5" y="-6.5" z="-6.5" />
+                <scale sx="3" sy="1" sz="8" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="shelfTop">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-28.5" y="19" z="-6.5" />
+                <scale sx="3" sy="0.5" sz="8" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="shelfRight">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-28.5" y="-3.5" z="-6.5" />
+                <scale sx="3" sy="7.5" sz="0.75" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="shelfLeft">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-28.5" y="-3.5" z="15.25" />
+                <scale sx="3" sy="7.5" sz="0.75" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofa">
+            <material id="White" />
+
+            <texture id="sofa">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-30.5" y="-8.5" z="-5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="sofaMainSeat" />
+                <noderef id ="sofaSecondarySeat" />
+                <noderef id ="sofaLeftSide" />
+                <noderef id ="sofaBackSide" />
+                <noderef id ="sofaRightSide" />
+                <noderef id ="sofaMainCushion" />
+                <noderef id ="sofaSecondaryCushion" />
+                <noderef id ="sofaPillow" />
+            </descendants>
+        </node>
+
+        <node id="lamp">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="lampTop" />
+                <noderef id ="lampSupport" />
+                <noderef id ="lampBase" />
+            </descendants>
+        </node>
+
+        <node id="lampTop">
+            <material id="LightBrown" />
+
+            <texture id="lamp">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-52.5" y="6.5" z="23.5" />
+                <rotation axis="x" angle="-90" />
+                <scale sx="1" sy="1" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinderWithoutCircles" height="14.75" topRadius="4" bottomRadius="5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="lampSupport">
+            <material id="LightBrown" />
+
+            <texture id="metal">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-52.5" y="-15" z="23.5" />
+                <rotation axis="x" angle="-90" />
+                <scale sx="1" sy="1" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="50" topRadius="0.5" bottomRadius="0.5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="lampBase">
+            <material id="LightBrown" />
+
+            <texture id="metal">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-52.5" y="-15" z="23.5" />
+                <rotation axis="x" angle="-90" />
+                <scale sx="1" sy="1" sz="0.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="1" topRadius="2.5" bottomRadius="2.5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="sofaMainSeat">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="-6.5" z="-6.5" />
+                <scale sx="5" sy="0.5" sz="11.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofaSecondarySeat">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="-6.5" z="16" />
+                <rotation axis="y" angle="-90" />
+                <scale sx="4" sy="0.5" sz="5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofaLeftSide">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="-6.5" z="-11" />
+                <scale sx="6.5" sy="3" sz="1.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofaBackSide">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="21" y="-6.5" z="-6.5" />
+                <rotation axis="y" angle="-90" />
+                <scale sx="11.5" sy="3" sz="1.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofaRightSide">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-13.5" y="-6.5" z="28" />
+                <scale sx="11.5" sy="3" sz="1.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofaMainCushion">
+            <material id="LightGrey" />
+
+            <texture id="sofa">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-5" z="-6.5" />
+                <scale sx="6" sy="1" sz="11.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofaSecondaryCushion">
+            <material id="LightGrey" />
+
+            <texture id="sofa">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-5" z="15.25" />
+                <rotation axis="y" angle="-90" />
+                <scale sx="4.25" sy="1" sz="5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="sofaPillow">
+            <material id="LightGrey" />
+
+            <texture id="sofa">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="17.5" y="-3" z="-6.5" />
+                <rotation axis="z" angle="-10" />
+                <rotation axis="y" angle="-90" />
+                <scale sx="11.5" sy="3" sz="2.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="cubemap">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <scale sx="1" sy="1" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="invertedCube" />
+            </descendants>
+        </node>
+
+        <node id="chair1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="-6.5" z="-11" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="chair" />
+            </descendants>
+        </node>
+
+        <node id="chair2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="10.5" y="-6.5" z="20" />
+                <rotation axis="y" angle="180" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="chair" />
+            </descendants>
+        </node>
+
+        <node id="chair">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <scale sx="1" sy="1.15" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="seat" />
+                <noderef id ="leg1" />
+                <noderef id ="leg2" />
+                <noderef id ="leg3" />
+                <noderef id ="leg4" />
+                <noderef id ="chairBack" />
+            </descendants>
+        </node>
+
+        <node id="seat">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-0.15" y="0" z="-0.15" />
+                <scale sx="3.1" sy="0.35" sz="3.1" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="leg1">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-7.5" z="0" />
+                <scale sx="0.4" sy="2.5" sz="0.4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="leg2">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="7.8" y="-7.5" z="0" />
+                <scale sx="0.4" sy="2.5" sz="0.4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="leg3">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-7.5" z="7.8" />
+                <scale sx="0.4" sy="2.5" sz="0.4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="leg4">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="7.8" y="-7.5" z="7.8" />
+                <scale sx="0.4" sy="2.5" sz="0.4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="chairBack">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-0.125" z="0.125" />
+                <rotation axis="x" angle="-5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="backLeg1" />
+                <noderef id ="backLeg2" />
+                <noderef id ="backLeg3" />
+                <noderef id ="backLeg4" />
+                <noderef id ="backLeg5" />
+                <noderef id ="backLeg6" />
+                <noderef id ="backLeg7" />
+                <noderef id ="backLeg8" />
+            </descendants>
+        </node>
+
+        <node id="backLeg1">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-0.15" y="1" z="-0.15" />
+                <scale sx="0.4" sy="3" sz="0.4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="backLeg2">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="7.95" y="1" z="-0.15" />
+                <scale sx="0.4" sy="3" sz="0.4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="backLeg3">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.5" y="8" z="0.125" />
+                <scale sx="2.5" sy="0.4" sz="0.25" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="backLeg4">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.5" y="2.5" z="0.125" />
+                <scale sx="2.5" sy="0.4" sz="0.25" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="backLeg5">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="3.5" z="0.25" />
+                <scale sx="0.4" sy="1.5" sz="0.15" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="backLeg6">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="3.0675" y="3.5" z="0.25" />
+                <scale sx="0.4" sy="1.5" sz="0.15" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+
+        <node id="backLeg7">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="4.625" y="3.5" z="0.25" />
+                <scale sx="0.4" sy="1.5" sz="0.15" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="backLeg8">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="6.25" y="3.5" z="0.25" />
+                <scale sx="0.4" sy="1.5" sz="0.15" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="table">
+            <material id="White" />
+
+            <texture id="lightWood">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-0.5" z="0" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="tableTop" />
+                <noderef id ="tableLeg1" />
+                <noderef id ="tableLeg2" />
+                <noderef id ="tableLeg3" />
+                <noderef id ="tableLeg4" />
+            </descendants>
+        </node>
+
+        <node id="tableTop">
+            <material id="White" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <rotation axis="x" angle="90" />
+                <translation x="-3.25" y="-4" z="0.3" />
+                <scale sx="5.75" sy="5.75" sz="0.4" />
+            </transformations>
+
+            
+            <descendants>
+                <noderef id = "cube" />   
+            </descendants>
+        </node>
+
+        <node id="tableLeg1">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-2.5" y="-1.5" z="-3" />
+                <rotation axis="x" angle="90" />
+                <scale sx="0.5" sy="0.5" sz="4.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id = "cube" />
+            </descendants>
+        </node>
+
+        <node id="tableLeg2">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="11.5" y="-1.5" z="-3" />
+                <rotation axis="x" angle="90" />
+                <scale sx="0.5" sy="0.5" sz="4.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id = "cube" />
+            </descendants>
+        </node>
+
+        <node id="tableLeg3">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-2.5" y="-1.5" z="11" />
+                <rotation axis="x" angle="90" />
+                <scale sx="0.5" sy="0.5" sz="4.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id = "cube" />
+            </descendants>
+        </node>
+
+        <node id="tableLeg4">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="11.5" y="-1.5" z="11" />
+                <rotation axis="x" angle="90" />
+                <scale sx="0.5" sy="0.5" sz="4.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id = "cube" />
+            </descendants>
+        </node>
+
+        <node id="tableSupport">
+            <material id="null" />
+
+            <texture id="metal">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="-0.4" z="0" />
+                <rotation axis="x" angle="90" />
+                <scale sx="5" sy="5" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="14.75" topRadius="0.1" bottomRadius="0.1" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="tableSupport2">
+            <material id="Black" />
+
+            <texture id="metal">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-2.25" y="-15" z="-2.25" />
+                <rotation axis="x" angle="90" />
+                <scale sx="1.5" sy="1.5" sz="0.05" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id ="cube" />
+            </descendants>
+        </node>
+
+        <node id="scoreBoard1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.5" y="-0.4" z="-4" />
+                <rotation axis="y" angle="-45" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="scoreBoardBase" />
+                <noderef id="scoreBoardPlayer1Pieces" />
+                <noderef id="scoreBoardPlayer1PiecesCounter" />
+                <noderef id="scoreBoardPlayer2Pieces" />
+                <noderef id="scoreBoardPlayer2PiecesCounter" />
+                <noderef id="player1Time" />
+                <noderef id="player1Confetti1" />
+                <noderef id="player1Confetti2" />
+                <noderef id="player2Confetti1" />
+                <noderef id="player2Confetti2" />
+            </descendants>
+        </node>
+
+        <node id="player1Confetti1">           
+            <material id="defaultMaterial" /> 
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="8.25" y="0.65" z="8.25" />
+                <rotation axis="y" angle="45" />
+                <scale sx="2" sy="2" sz="2" />
+            </transformations>
+
+            
+            <descendants>
+                <leaf type="spriteanim" ssid="confetti" duration="2.5" startCell="4" endCell="64" />
+            </descendants>
+        </node>
+
+        <node id="player1Confetti2">           
+            <material id="defaultMaterial" /> 
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="14" y="0.65" z="2.65" />
+                <rotation axis="y" angle="45" />
+                <scale sx="2" sy="2" sz="2" />
+            </transformations>
+
+            
+            <descendants>
+                <leaf type="spriteanim" ssid="confetti" duration="2.5" startCell="4" endCell="64" />
+            </descendants>
+        </node>
+
+        <node id="player2Confetti1">           
+            <material id="defaultMaterial" /> 
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="3.9" y="0.65" z="3.9" />
+                <rotation axis="y" angle="45" />
+                <scale sx="2" sy="2" sz="2" />
+            </transformations>
+
+            
+            <descendants>
+                <leaf type="spriteanim" ssid="confetti" duration="2.5" startCell="4" endCell="64" />
+            </descendants>
+        </node>
+
+        <node id="player2Confetti2">           
+            <material id="defaultMaterial" /> 
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="9.6" y="0.65" z="-1.75" />
+                <rotation axis="y" angle="45" />
+                <scale sx="2" sy="2" sz="2" />
+            </transformations>
+
+            
+            <descendants>
+                <leaf type="spriteanim" ssid="confetti" duration="2.5" startCell="4" endCell="64" />
+            </descendants>
+        </node>
+
+        <node id="scoreBoard2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="10.25" y="-0.4" z="13.5" />
+                <rotation axis="y" angle="135" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="scoreBoardBase" />
+                <noderef id="scoreBoardPlayer1Pieces" />
+                <noderef id="scoreBoardPlayer1PiecesCounter" />
+                <noderef id="scoreBoardPlayer2Pieces" />
+                <noderef id="scoreBoardPlayer2PiecesCounter" />
+                <noderef id="player2Time" />
+            </descendants>
+        </node>
+
+        <node id="player1Time">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="1.0" aft="1.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0.9" y="2" z="5.25" />
+                <rotation axis="y" angle="90" />
+                <scale sx="2.25" sy="2.25" sz="2.25"/>
+            </transformations>
+            
+            <descendants>
+                <leaf type="spritetext" text="Time:10" />
+            </descendants>
+        </node>
+
+        <node id="player2Time">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="1.0" aft="1.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0.9" y="2" z="5.25" />
+                <rotation axis="y" angle="90" />
+                <scale sx="2.25" sy="2.25" sz="2.25"/>
+            </transformations>
+            
+            <descendants>
+                <leaf type="spritetext" text="Time:10" />
+            </descendants>
+        </node>
+
+        <node id="scoreBoardPlayer2PiecesCounter">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="1.0" aft="1.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0.9" y="0.35" z="2.25" />
+                <rotation axis="y" angle="90" />
+                <scale sx="4.0" sy="4.0" sz="4.0"/>
+            </transformations>
+            
+            <descendants>
+                <leaf type="spritetext" text="0" />
+            </descendants>
+        </node>
+
+        <node id="scoreBoardPlayer2Pieces">
+            <material id="LightBrown" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.75" y="1.15" z="1.25" />
+                <rotation axis="y" angle="90" />
+                <scale sx="1" sy="1" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="0.1" topRadius="0.9" bottomRadius="0.9" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="scoreBoardPlayer1PiecesCounter">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="1.0" aft="1.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0.9" y="0.35" z="5" />
+                <rotation axis="y" angle="90" />
+                <scale sx="4.0" sy="4.0" sz="4.0"/>
+            </transformations>
+            
+            <descendants>
+                <leaf type="spritetext" text="0" />
+            </descendants>
+        </node>
+
+        <node id="scoreBoardPlayer1Pieces">
+            <material id="LightBrown" />
+
+            <texture id="clear">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.75" y="1.15" z="4" />
+                <rotation axis="y" angle="90" />
+                <scale sx="1" sy="1" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="0.1" topRadius="0.9" bottomRadius="0.9" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="scoreBoardBase">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <scale sx="0.25" sy="1" sz="1.75" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="piecesBox">
+            <material id="LightBrown" />
+
+            <texture id="woodTex2">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="0" z="3" />
+                <scale sx="0.8" sy="0.8" sz="0.8" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="piecesBoxBack" />
+                <noderef id="piecesBoxFront" />
+                <noderef id="piecesBoxRight" />
+                <noderef id="piecesBoxLeft" />
+                <noderef id="insideBox" />
+                <noderef id="boxCover" />
+            </descendants>
+        </node>
+
+        <node id="boxCover">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="1.5" z="-1.5s" />
+                <rotation axis="y" angle="-35" />
+                <scale sx="0.8" sy="0.125" sz="1.75" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="insideBox">
+            <material id="Black" />
+
+            <texture id="BlackTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.45" y="0" z="0" />
+                <scale sx="0.51" sy="0.5" sz="1.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="piecesBoxFront">
+            <material id="LightBrown" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <scale sx="0.15" sy="0.5" sz="1.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="piecesBoxBack">
+            <material id="LightBrown" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="2" y="0" z="0" />
+                <scale sx="0.15" sy="0.5" sz="1.5" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="piecesBoxRight">
+            <material id="LightBrown" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="0" z="0" />
+                <rotation axis="y" angle="90" />
+                <scale sx="0.15" sy="0.5" sz="0.815" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="piecesBoxLeft">
+            <material id="LightBrown" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0" y="0" z="4.95" />
+                <rotation axis="y" angle="90" />
+                <scale sx="0.15" sy="0.5" sz="0.815" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="board">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="-0.5" y="-0.39" z="-1.5" />
+                <scale sx="4" sy="0.1" sz="4" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="boardMain" />
+                <noderef id="boardCil1" />
+                <noderef id="boardCil2" />
+                <noderef id="boardCil3" />
+                <noderef id="boardCil4" />
+            </descendants>
+        </node>
+
+        <node id="boardCil1">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.5" y="12.5" z="2.3" />
+                <rotation axis="x" angle="90" /> 
+                <scale sx="0.05" sy="0.05" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="10" topRadius="0.5" bottomRadius="0.5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="boardCil2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="2.515" y="12.5" z="2.3" />
+                <rotation axis="x" angle="90" /> 
+                <scale sx="0.05" sy="0.05" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="10" topRadius="0.5" bottomRadius="0.5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="boardCil3">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="2.515" y="12.5" z="0.75" />
+                <rotation axis="x" angle="90" /> 
+                <scale sx="0.05" sy="0.05" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="10" topRadius="0.5" bottomRadius="0.5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="boardCil4">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="0.5" y="12.5" z="0.75" />
+                <rotation axis="x" angle="90" /> 
+                <scale sx="0.05" sy="0.05" sz="1" />
+            </transformations>
+
+            
+            <descendants>   
+                <leaf type="cylinder" height="10" topRadius="0.5" bottomRadius="0.5" stacks="1" slices="64"/>
+            </descendants>
+        </node>
+
+        <node id="boardMain">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="boardBigSupport">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="-0.125" z="-0.5" />
+                <scale sx="2.667" sy="0.05" sz="0.33" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="pieceSupport">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            
+            <transformations>
+                <translation x="1.5" y="-0.125" z="-0.5" />
+                <scale sx="2.667" sy="0.05" sz="0.33" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="pieceSupport2">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="1.5" y="-0.125" z="8.5" />
+                <scale sx="2.667" sy="0.05" sz="0.33" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="boardSupport">
+            <material id="LightBrown" />
+
+            <texture id="woodTex">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="2.5" y="-0.155" z="1.5" />
+                <scale sx="2" sy="0.05" sz="2" />
+            </transformations>
+
+            
+            <descendants>   
+                <noderef id="cube" />
+            </descendants>
+        </node>
+
+        <node id="cube">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="1.0" aft="1.0" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <noderef id="right" />
+                <noderef id="left" />
+                <noderef id="front" />
+                <noderef id="back" />
+                <noderef id="top" />
+                <noderef id="bottom" />
+
+            </descendants>
+        </node>
+
+        <node id="right">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="3" y="0" z="3" />
+                <rotation axis="y" angle="90" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="left">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <rotation axis="y" angle="270" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="front">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="0" z="3" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="back">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="3" y="0" z="0" />
+                <rotation axis="y" angle="180" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="top">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="0" y="3" z="3" />
+                <rotation axis="x" angle="270" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="bottom">
+            <material id="null" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <rotation axis="x" angle="90" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="invertedCube">
+            <material id="defaultMaterial" />
+
+            <texture id="null">
+                <amplification afs="1.0" aft="1.0" />
+            </texture>
+
+            <transformations>
+            </transformations>
+
+            <descendants>
+                <noderef id="invertedRight" />
+                <noderef id="invertedLeft" />
+                <noderef id="invertedBottom" />
+                <noderef id="invertedBack" />
+                <noderef id="invertedFront" />
+                <noderef id="invertedTop" />
+            </descendants>
+        </node>
+
+        <node id="invertedFront">
+            <material id="LightGrey" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="22.5" y="-15" z="30" />
+                <rotation axis="y" angle="-180" />
+                <scale sx="27.5" sy="12.5" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="invertedBack">
+            <material id="LightGrey" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-60" y="-15" z="-52.5" />
+                <rotation axis="y" angle="0" />
+                <scale sx="27.5" sy="12.5" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="invertedLeft">
+            <material id="LightGrey" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-60" y="-15" z="30" />
+                <rotation axis="y" angle="90" />
+                <scale sx="27.5" sy="12.5" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="invertedRight">
+            <material id="LightGrey" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="22.5" y="-15" z="-52.5" />
+                <rotation axis="y" angle="-90" />
+                <scale sx="27.5" sy="12.5" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="invertedBottom">
+            <material id="LightGrey" />
+
+            <texture id="woodFloor">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-60" y="-15" z="30" />
+                <rotation axis="x" angle="-90" />
+                <scale sx="27.5" sy="27.5" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+        <node id="invertedTop">
+            <material id="LightGrey" />
+
+            <texture id="null">
+                <amplification afs="3.0" aft="3.0" />
+            </texture>
+
+            <transformations>
+                <translation x="-60" y="22.5" z="-52.5" />
+                <rotation axis="x" angle="90" />
+                <scale sx="27.5" sy="27.5" sz="1" />
+            </transformations>
+
+            <descendants>
+                <leaf type="rectangle" x1="0" y1="0" x2="3" y2="3" />
+            </descendants>
+        </node>
+
+    </nodes>
+
+</lsf>
